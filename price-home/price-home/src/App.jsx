@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export const App = () => {
   return (
-    <div className="overflow-x-hidden text-black antialiased selection:bg-red-400 selection:text-black">
+    <div className="overflow-x-hidden text-black antialiased selection:bg-gray-300 selection:text-black">
       <div className="font-sans min-h-screen flex flex-col">
         <Navbar />
         <AboutUs />

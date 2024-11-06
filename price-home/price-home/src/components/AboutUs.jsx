@@ -6,7 +6,7 @@ const AboutUs = () => (
     <div className="text-center mb-10">
       <h2 className="text-3xl font-medium pb-4">
         ¿Quienes{" "}
-        <span className="bg-gradient-to-r from-red-700 via-orange-800 to-red-900 bg-clip-text tracking-tight text-transparent font-semibold">
+        <span className="bg-gradient-to-r from-red-700/90 via-orange-800 to-red-900 bg-clip-text tracking-tight text-transparent font-semibold">
           Somos?
         </span>
       </h2>
@@ -29,7 +29,7 @@ const AboutUs = () => (
         className="w-full lg:w-1/2 text-center lg:text-left"
       >
       <div className="flex justify-center lg:justify-start font-semibold text-[17px]">
-        <p className="max-w-xl py-6 tracking-normal">
+        <p className="max-w-xl py-3 tracking-normal">
           PriceHome es una herramienta intuitiva y accesible que permite a los usuarios obtener una estimación rápida del valor comercial de sus propiedades, bien sea si desean arrendarla o venderla. PriceHome hace uso de un modelo de predicción, el cual, ingresados ciertos parámetros, predice el valor comercial aproximado de la propiedad, tomando como referencia datos del mercado inmobiliario.
         </p>
       </div>
