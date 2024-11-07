@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from 'framer-motion'
 import logoTipo from "../assets/priceHomeLogotipo.png";
 
 const colombianCOP = new Intl.NumberFormat("es-CO", {
@@ -66,91 +67,147 @@ const FormSection = () => {
 
   return (
     <main id="home" className="flex-grow container mx-auto my-12 pb-24">
-      <img className="w-96 mx-auto pt-4" src={logoTipo} alt="Logo" />
+      <motion.img 
+      whileInView={{opacity: 1, y: 0}}
+      initial={{opacity: 0, y: -50}}
+      transition={{duration: 1.5}}
+      className="w-96 mx-auto pt-4" 
+      src={logoTipo} 
+      alt="Logo" 
+      />
       <div className="font-bold flex flex-col gap-3 max-w-md mx-auto mt-10">
         <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
-          <label className="px-10">
+          <motion.label 
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="px-10">
             Área:
             <input
-              className="border-2 rounded-lg p-2 w-full mt-1 font-semibold"
+              className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="number"
               value={area}
               onChange={handleNumberChange(setArea)}
             />
-          </label>
-          <label className="px-10">
+          </motion.label>
+          <motion.label 
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="px-10">
             Baños:
             <input
-              className="border-2 rounded-lg p-2 w-full mt-1 font-semibold"
+              className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="number"
               value={baths}
               onChange={handleNumberChange(setBaths)}
             />
-          </label>
-          <label className="px-10">
+          </motion.label>
+          <motion.label 
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="px-10">
             Ciudad:
             <input
-              className="border-2 rounded-lg p-2 w-full mt-1 font-semibold"
+              className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="text"
               value={city}
               onChange={(e) => setCity(e.target.value)}
             />
-          </label>
-          <label className="px-10">
+          </motion.label>
+          <motion.label 
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="px-10">
             Garajes:
             <input
-              className="border-2 rounded-lg p-2 w-full mt-1 font-semibold"
+              className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="number"
               value={garages}
               onChange={handleNumberChange(setGarages)}
             />
-          </label>
-          <label className="px-10">
+          </motion.label>
+          <motion.label 
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="px-10">
             ¿Es nuevo?
             <input
-              className="border-2 rounded-lg p-2 ml-2 mt-1 font-semibold"
+              className="border-2 rounded-lg p-2 ml-2 mt-1 font-medium"
               type="checkbox"
               checked={isNew}
               onChange={(e) => setIsNew(e.target.checked)}
             />
-          </label>
-          <label className="px-10">
+          </motion.label>
+          <motion.label 
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="px-10">
             Barrio:
             <input
-              className="border-2 rounded-lg p-2 w-full mt-1 font-semibold"
+              className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="text"
               value={neighborhood}
               onChange={(e) => setNeighborhood(e.target.value)}
             />
-          </label>
-          <label className="px-10">
+          </motion.label>
+          <motion.label 
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="px-10">
             Habitaciones:
             <input
-              className="border-2 rounded-lg p-2 w-full mt-1 font-semibold"
+              className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="number"
               value={rooms}
               onChange={handleNumberChange(setRooms)}
             />
-          </label>
-          <label className="px-10">
+          </motion.label>
+          <motion.label 
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="px-10">
             Estrato:
             <input
-              className="border-2 rounded-lg p-2 w-full mt-1 font-semibold"
+              className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="text"
               value={stratum}
               onChange={(e) => setStratum(e.target.value)}
             />
-          </label>
-          <label className="px-10">
+          </motion.label>
+          <motion.label 
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="px-10">
             Tipo de propiedad:
             <input
-              className="border-2 rounded-lg p-2 w-full mb-10 mt-1 font-semibold"
+              className="border-2 rounded-lg p-2 w-full mb-10 mt-1 font-medium"
               type="text"
               value={type}
               onChange={(e) => setType(e.target.value)}
             />
-          </label>
-          <button
+          </motion.label>
+          <motion.button
+            whileInView={{opacity: 1, y: 0}}
+            initial={{opacity: 0, y: 50}}
+            transition={{duration: 1}}
+            viewport={{ once: true }}
             className={`mx-auto px-28 py-[10px] text-white rounded ${
               isFormValid ? "bg-red-800 hover:bg-red-900" : "bg-gray-200 text-zinc-950"
             }`}
@@ -158,16 +215,24 @@ const FormSection = () => {
             disabled={!isFormValid}
           >
             Estimar
-          </button>
+          </motion.button>
           <div className="flex justify-between gap-4 mt-10 px-4">
-            <div className="bg-gray-200 p-6 rounded-lg w-1/2 text-center text-2xl">
+            <motion.div 
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 1.5 }}
+              className="bg-gray-200 p-6 rounded-lg w-1/2 text-center text-2xl">
               <h1 className="font-bold">Precio de venta:</h1>
               <p>{colombianCOP.format(predictedPrice)}</p>
-            </div>
-            <div className="bg-gray-200 p-6 rounded-lg w-1/2 text-center text-2xl">
+            </motion.div>
+            <motion.div 
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 100 }}
+              transition={{ duration: 1.5 }}
+              className="bg-gray-200 p-6 rounded-lg w-1/2 text-center text-2xl">
               <h1 className="font-bold">Precio de arriendo:</h1>
               <p>{colombianCOP.format(predictedPrice / 10 / 12)}</p>
-            </div>
+            </motion.div>
           </div>
         </form>
       </div>
