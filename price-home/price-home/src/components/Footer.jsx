@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 const Footer = () => (
     <footer className="bg-red-900 text-neutral-100 font-medium pt-8 pb-8">
         <div className="w-full px-8 flex justify-center items-center">

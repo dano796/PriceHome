@@ -25,8 +25,7 @@ const AboutUs = () => (
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -100 }}
         transition={{ duration: 1.5 }}
-        className="w-full lg:w-1/2 lg:p-8 flex justify-center lg:justify-end"
-      >
+        className="w-full lg:w-1/2 lg:p-8 flex justify-center lg:justify-end">
         <img className="rounded-2xl w-4/5 -my-16 pb-12" src={aboutImg} alt="About Us" />
       </motion.div>
 
@@ -34,8 +33,7 @@ const AboutUs = () => (
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1.5 }}
-        className="w-full lg:w-1/2 text-center lg:text-left"
-      >
+        className="w-full lg:w-1/2 text-center lg:text-left">
       <div className="flex justify-center lg:justify-start font-medium text-[17px]">
         <p className="max-w-xl py-3 tracking-normal">
           PriceHome es una herramienta intuitiva y accesible que permite a los usuarios obtener una estimación rápida del valor comercial de sus propiedades, bien sea si desean arrendarla o venderla. PriceHome hace uso de un modelo de predicción, el cual, ingresados ciertos parámetros, predice el valor comercial aproximado de la propiedad, tomando como referencia datos del mercado inmobiliario.

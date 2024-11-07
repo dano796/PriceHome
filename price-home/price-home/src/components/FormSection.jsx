@@ -59,7 +59,6 @@ const FormSection = () => {
     await estimarPrecio();
   };
 
-  // Función de cambio de valor que permite "" en lugar de 0
   const handleNumberChange = (setter) => (e) => {
     const value = e.target.value;
     setter(value === "" ? "" : Number(value));
@@ -73,8 +72,7 @@ const FormSection = () => {
       transition={{duration: 1.5}}
       className="w-96 mx-auto pt-4" 
       src={logoTipo} 
-      alt="Logo" 
-      />
+      alt="Logo" />
       <div className="font-bold flex flex-col gap-3 max-w-md mx-auto mt-10">
         <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
           <motion.label 
@@ -88,8 +86,7 @@ const FormSection = () => {
               className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="number"
               value={area}
-              onChange={handleNumberChange(setArea)}
-            />
+              onChange={handleNumberChange(setArea)}/>
           </motion.label>
           <motion.label 
             whileInView={{ opacity: 1, x: 0 }}
@@ -102,8 +99,7 @@ const FormSection = () => {
               className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="number"
               value={baths}
-              onChange={handleNumberChange(setBaths)}
-            />
+              onChange={handleNumberChange(setBaths)}/>
           </motion.label>
           <motion.label 
             whileInView={{ opacity: 1, x: 0 }}
@@ -116,8 +112,7 @@ const FormSection = () => {
               className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="text"
               value={city}
-              onChange={(e) => setCity(e.target.value)}
-            />
+              onChange={(e) => setCity(e.target.value)}/>
           </motion.label>
           <motion.label 
             whileInView={{ opacity: 1, x: 0 }}
@@ -130,8 +125,7 @@ const FormSection = () => {
               className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="number"
               value={garages}
-              onChange={handleNumberChange(setGarages)}
-            />
+              onChange={handleNumberChange(setGarages)}/>
           </motion.label>
           <motion.label 
             whileInView={{ opacity: 1, x: 0 }}
@@ -144,8 +138,7 @@ const FormSection = () => {
               className="border-2 rounded-lg p-2 ml-2 mt-1 font-medium"
               type="checkbox"
               checked={isNew}
-              onChange={(e) => setIsNew(e.target.checked)}
-            />
+              onChange={(e) => setIsNew(e.target.checked)}/>
           </motion.label>
           <motion.label 
             whileInView={{ opacity: 1, x: 0 }}
@@ -158,8 +151,7 @@ const FormSection = () => {
               className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="text"
               value={neighborhood}
-              onChange={(e) => setNeighborhood(e.target.value)}
-            />
+              onChange={(e) => setNeighborhood(e.target.value)}/>
           </motion.label>
           <motion.label 
             whileInView={{ opacity: 1, x: 0 }}
@@ -172,8 +164,7 @@ const FormSection = () => {
               className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="number"
               value={rooms}
-              onChange={handleNumberChange(setRooms)}
-            />
+              onChange={handleNumberChange(setRooms)}/>
           </motion.label>
           <motion.label 
             whileInView={{ opacity: 1, x: 0 }}
@@ -186,8 +177,7 @@ const FormSection = () => {
               className="border-2 rounded-lg p-2 w-full mt-1 font-medium"
               type="text"
               value={stratum}
-              onChange={(e) => setStratum(e.target.value)}
-            />
+              onChange={(e) => setStratum(e.target.value)}/>
           </motion.label>
           <motion.label 
             whileInView={{ opacity: 1, x: 0 }}
@@ -200,8 +190,7 @@ const FormSection = () => {
               className="border-2 rounded-lg p-2 w-full mb-10 mt-1 font-medium"
               type="text"
               value={type}
-              onChange={(e) => setType(e.target.value)}
-            />
+              onChange={(e) => setType(e.target.value)}/>
           </motion.label>
           <motion.button
             whileInView={{opacity: 1, y: 0}}
@@ -212,8 +201,7 @@ const FormSection = () => {
               isFormValid ? "bg-red-800 hover:bg-red-900" : "bg-gray-200 text-zinc-950"
             }`}
             type="submit"
-            disabled={!isFormValid}
-          >
+            disabled={!isFormValid}>
             Estimar
           </motion.button>
           <div className="flex justify-between gap-4 mt-10 px-4">
