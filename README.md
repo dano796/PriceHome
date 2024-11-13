@@ -14,9 +14,9 @@ PriceHome utiliza un modelo de predicción de precios inmobiliarios que, a parti
 
 ## Desarrollado por
 
-**Argenis Eduardo Omaña Molina**
-**Daniel Ortiz Aristizábal**
-**Felipe Torres Montoya**
-**Sebastián Monsalve Gómez**
+- **Argenis Eduardo Omaña Molina**
+- **Daniel Ortiz Aristizábal**
+- **Felipe Torres Montoya**
+- **Sebastián Monsalve Gómez**
 
 **PriceHome** - Estimación rápida y confiable para el valor de tus propiedades.
